@@ -6,13 +6,143 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#ffca28"
+        app:boxStrokeWidth="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etxt_base_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="136dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Base Number"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutBase"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:boxStrokeColor="#ffca28"
+        app:boxStrokeWidth="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        tools:ignore="MissingConstraints">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etxt_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Number"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/etxt_base_number"
+            app:layout_constraintTop_toBottomOf="@+id/etxt_base_number" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="324dp"
+        android:text="Add"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_sub"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="324dp"
+        android:text="Sub"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_clear"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toEndOf="@+id/btn_add" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="324dp"
+        android:text="Clear"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="220dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="210dp"
+        android:background="@drawable/result_text_background"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="125dp"
+        android:progressBackgroundTint="#FFFAAA"
+        android:progressTint="#ffca28"
+        android:secondaryProgressTint="#ffca28"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
