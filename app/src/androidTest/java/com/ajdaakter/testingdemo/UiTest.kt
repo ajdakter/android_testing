@@ -22,7 +22,7 @@ import org.junit.Rule
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class UiTest {
 
     @Rule
     @JvmField
@@ -37,7 +37,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun testAddition() {
-       onView(withId(R.id.etxt_base_number))
+        onView(withId(R.id.etxt_base_number))
             .perform(ViewActions.typeText("10"), ViewActions.closeSoftKeyboard())
         onView(withId(R.id.etxt_number))
             .perform(ViewActions.typeText("5"), ViewActions.closeSoftKeyboard())
@@ -65,8 +65,9 @@ class ExampleInstrumentedTest {
         onView(withId(R.id.txt_result))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
+
     @Test
-    fun testClear(){
+    fun testClear() {
         onView(withId(R.id.btn_clear)).perform(ViewActions.click())
         onView(withId(R.id.txt_result))
             .check(ViewAssertions.matches(ViewMatchers.withText("0")))
